@@ -1,0 +1,27 @@
+html {
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+a {
+    display: inline-block;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+body{
+
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}

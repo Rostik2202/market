@@ -40,6 +40,7 @@ function images() {
 function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.js',
+        'node_modules/slick-carousel/slick/slick.js',
         'app/js/main.js',
     ])
 
@@ -50,8 +51,20 @@ function scripts() {
 
 }
 
+function style() {
+    return src([
+        'node_modules/normalize.css/normalize.css',
+        'node_modules/slick-carousel/slick/slick.css',
+    ])
+
+        .pipe(concat('libs.min.css'))
+        .pipe(dest('app/css'))
+        .pipe(browserSync.stream())
+
+}
+
 function styles() {
-    return src('app/scss/style.scss')
+    return src('app/scss/**/*.scss')
         .pipe(scss({ outputStyle: 'compressed' }))
         .pipe(concat('style.min.css'))
         .pipe(autoprefixer({
@@ -89,4 +102,4 @@ exports.cleanDist = cleanDist;
 
 
 exports.build = series(cleanDist, images, build);
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.default = parallel(style, styles, scripts, browsersync, watching);
