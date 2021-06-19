@@ -84,7 +84,7 @@ function watching() {
 
 function build() {
     return src([
-        'app/css/style.min.css',
+        'app/scss/**/*.scss',
         'app/js/main.min.js',
         'app/fonts/**/*',
         'app/*.html'
