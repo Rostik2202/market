@@ -42,6 +42,7 @@ function scripts() {
         'node_modules/jquery/dist/jquery.js',
         'node_modules/slick-carousel/slick/slick.js',
         'node_modules/mixitup/dist/mixitup.js',
+        'node_modules/rateyo/src/jquery.rateyo.js',
         'app/js/main.js',
         
     ])
@@ -57,6 +58,7 @@ function style() {
     return src([
         'node_modules/normalize.css/normalize.css',
         'node_modules/slick-carousel/slick/slick.css',
+        'node_modules/rateyo/src/jquery.rateyo.css',
     ])
 
         .pipe(concat('libs.min.css'))

@@ -24,6 +24,10 @@ h2 {
     margin: 0;
 }
 
+h3{
+    margin: 0;
+}
+
 body {
     font-family: "Roboto-Regular", sans-serif;
     font-size: 15px;
@@ -55,4 +59,9 @@ body {
     line-height: 60px;
     font-weight: 700;
     margin-bottom: 30px;
+}
+
+.rate-star{
+    display: inline-block;
+    margin-right: 13px;
 }
