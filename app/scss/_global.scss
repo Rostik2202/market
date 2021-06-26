@@ -35,6 +35,10 @@ body {
     color: $text;
 }
 
+p{
+    margin: 0;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -57,7 +61,7 @@ body {
     text-align: center;
     font-size: 36px;
     line-height: 60px;
-    font-weight: 700;
+    @include f700;
     margin-bottom: 30px;
 }
 
@@ -65,3 +69,5 @@ body {
     display: inline-block;
     margin-right: 13px;
 }
+
+
