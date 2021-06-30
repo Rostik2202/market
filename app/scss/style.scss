@@ -442,3 +442,155 @@ iconsvg-1 {
 }
 
 //end tutorials
+
+//start footer
+
+.footer {
+    background-color: $font;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 115px 0 90px;
+    }
+    &__item {
+        max-width: 270px;
+        width: 100%;
+        &-title {
+            font-size: 22px;
+            font-family: "Raleway", sans-serif;
+            font-weight: 700;
+            color: #fff;
+            position: relative;
+            padding-bottom: 31px;
+            margin-bottom: 30px;
+            &::after {
+                content: "";
+                position: absolute;
+                width: 51px;
+                height: 4px;
+                left: 2px;
+                bottom: 0;
+                background-color: $green;
+            }
+        }
+        &-text {
+            color: #b7c3c8;
+            margin-bottom: 30px;
+        }
+        &-addres {
+            color: #fff;
+            @include f500;
+            margin-bottom: 23px;
+            padding-left: 30px;
+            position: relative;
+            &::before {
+                content: "\f041";
+                font-family: "icomoon";
+                position: absolute;
+                left: 0;
+                color: $green;
+                font-size: 18px;
+            }
+        }
+        &-tel {
+            color: #fff;
+            @include f500;
+            padding-left: 30px;
+            position: relative;
+            &::before {
+                content: "\f095";
+                font-family: "icomoon";
+                position: absolute;
+                left: 0;
+                color: $green;
+                font-size: 18px;
+            }
+        }
+        &-list li {
+            padding-left: 22px;
+            position: relative;
+            & a {
+                margin-bottom: 14px;
+                color: #b7c3c8;
+            }
+            &::before {
+                content: "\f105";
+                font-family: "icomoon";
+                position: absolute;
+                left: 0;
+                color: $green;
+                font-size: 18px;
+                top: -2px;
+            }
+        }
+        &-social {
+            display: flex;
+            justify-content: space-between;
+            max-width: 170px;
+            margin-bottom: 33px;
+
+            & li a {
+            }
+        }
+    }
+
+    &__form-title {
+        font-size: 20px;
+        line-height: 36px;
+        color: #fff;
+        margin-bottom: 15px;
+    }
+
+    &__form {
+        position: relative;
+        & input {
+            display: block;
+            width: 100%;
+            padding:0 58px 0 15px ;
+            border: none;
+            background-color: #2f3c43;
+            color: #fff;
+            
+            height: 40px;
+            & ::placeholder {
+                font-size: 14px;
+                line-height: 36px;
+                color: #697378;
+            }
+        }
+        & button {
+            position: absolute;
+            background-color: $green;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+            height: 40px;
+            width: 44px;
+            border: none;
+            &::after{
+                content: '\f124';
+                color: #fff;
+                font-size: 20px;
+                font-family: "icomoon";
+
+            }
+            
+        }
+    }
+
+    &__col {
+        max-width: 215px;
+    }
+}
+
+.footer__copy {
+    border-top: 1px solid #424d53;
+    padding: 27px 0 35px;
+}
+.footer__copy-text {
+    text-align: center;
+    color: #8c9194;
+}
+
+//end footer
