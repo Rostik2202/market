@@ -3,6 +3,12 @@ $red:#e74c3c;
 $green:#8bc34a;
 $font: #263238;
 $grey:#f4f6f5;
+$yellow:#fcb322;
+$tomato:#ef6c00;
+$green-light:#95c85a;
+
+
+
 
 @mixin f500 {
     font-family: 'Roboto',sans-serif;
@@ -13,3 +19,8 @@ $grey:#f4f6f5;
     font-family: 'Roboto',sans-serif;
     font-weight: 700;
 }
+
+@mixin icon {
+    font-family: 'icomoon'
+}
+

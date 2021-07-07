@@ -20,11 +20,9 @@ li {
     margin: 0;
 }
 
-h2 {
-    margin: 0;
-}
-
-h3{
+h2,
+h3,
+h4 {
     margin: 0;
 }
 
@@ -35,7 +33,7 @@ body {
     color: $text;
 }
 
-p{
+p {
     margin: 0;
 }
 
@@ -65,9 +63,20 @@ p{
     margin-bottom: 30px;
 }
 
-.rate-star{
+.rate-star {
     display: inline-block;
     margin-right: 13px;
 }
 
-
+.angle-right {
+    position: relative;
+    padding-left: 15px;
+    &::before {
+        content: "\f105";
+        font-family: "icomoon";
+        position: absolute;
+        left: 0;
+        color: $green-light;
+        font-size: 14px;
+    }
+}

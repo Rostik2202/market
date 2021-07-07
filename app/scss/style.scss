@@ -36,6 +36,10 @@
     margin-left: 7px;
 }
 
+.header__btn-logout {
+    background-color: $red;
+}
+
 .header__buttom {
     background-color: $font;
 }
@@ -57,6 +61,293 @@
     font-size: 14px;
     line-height: 30px;
 }
+
+.header-circle {
+    & .active {
+        display: block;
+    }
+    bottom: none;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    position: relative;
+    &::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #a0a0a0;
+        font-size: 14px;
+    }
+    & + .header-circle {
+        margin-left: 15px;
+    }
+    span {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 18px;
+        right: -4px;
+        top: -8px;
+        font-size: 11px;
+        color: #fff;
+    }
+}
+
+.header__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.notification {
+    span {
+        background-color: $yellow;
+    }
+}
+
+.massage {
+    span {
+        background-color: $tomato;
+    }
+}
+
+.basket {
+    span {
+        background-color: $green-light;
+    }
+}
+
+.notification__inner,
+.massage__inner{
+    .circle__link img{
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        margin-right: 20px;
+    }
+}
+.notification__content,
+.massage__content{
+    .circle__content-title,
+    .circle__category,
+    .circle__date{
+        line-height: 18px;
+        
+    }
+
+   
+}
+
+.massage__content .circle__category{
+    font-size: 11px;
+}
+
+.circle__inner {
+    position: absolute;
+    top: 62px;
+    right: -20px;
+    overflow: hidden;
+    height: 0;
+    transition: all 0.5s;
+    border-top: 0px solid rgb(204, 204, 204);
+}
+.basket__box,
+.massage__box,
+.notification__box{
+    position: relative;
+    height: 90px;
+    margin: 56px 0px 0 15px;
+    &:hover {
+        .circle__inner {
+            height: auto;
+            border-width: 1px;  
+            overflow: hidden; 
+        }
+        .circle__item{
+            padding: 20px;
+            
+        }
+        .header-circle::before{
+            color: $font;
+        }
+    }
+    
+}
+.circle__item {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    border: 1px solid rgb(204, 204, 204);
+    border-top: none;
+    width: 270px;
+    z-index: 5;
+    position: relative;
+    background-color: #fff;
+    transition: all .5s;
+    &::before{
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        font-size: 16px;
+        color: #b0bec5;
+        cursor: pointer;
+    }  
+}
+.icons__color::before{
+        color: $tomato;
+    }
+
+.circle__link img {
+    margin-right: 15px;
+    width: 73px;
+    height: 57px;
+}
+
+.circle__content {
+    line-height: 20px;
+    align-items: center;
+}
+
+.circle__content-title {
+    @include f500;
+    color: $font;
+}
+
+.circle__category {
+    color: $green-light;
+    font-size: 12px;
+}
+.circle__prise {
+    color: #000;
+    @include f500;
+}
+
+.circle__date{
+    font-size: 10px;
+    color:#90a4ae;
+}
+
+.basker__sub {
+    position: relative;
+    border: 1px solid rgb(204, 204, 204);
+    border-top: none;
+    padding: 17px 15px 13px;
+    z-index: 100;
+    background-color: #fff;
+}
+.basker__total {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 12px;
+    padding-right: 22px;
+    margin-bottom: 15px;
+    @include f700;
+    color: $font;
+    font-size: 16px;
+}
+
+.basker__button {
+    display: flex;
+    justify-content: space-between;
+}
+.basker__button-left {
+    padding: 12px 23px 12px 18px;
+    background-color: $green-light;
+    color: #fff;
+    font-size: 14px;
+    @include f700;
+}
+
+.basker__button-right {
+    padding: 12px;
+    background-color: $red;
+    color: #fff;
+    font-size: 14px;
+    @include f700;
+}
+
+.uzer__box {
+    position: relative;
+    height: 90px;
+    margin-top: 38px;
+    &:hover {
+        .uzer__menu-list {
+            padding: 20px;
+            height: auto;
+            border-width: 1px;
+        }
+    }
+    .uzer {
+        &__inner {
+            display: flex;
+            align-items: center;
+            margin-right: 30px;
+            padding-right: 22px;
+            margin-left: 20px;
+            position: relative;
+            &::before {
+                content: "\f107";
+                position: absolute;
+                font-family: "icomoon";
+                color: #000;
+                right: 0;
+                top: 0;
+                color: #707070;
+                font-size: 16px;
+            }
+        }
+        &__images {
+            margin-right: 15px;
+            width: 34px;
+            height: 34px;
+            overflow: hidden;
+        }
+
+        &__about {
+            font-style: 14px;
+            line-height: 24px;
+        }
+        &__name {
+            @include f500;
+            color: #222222;
+        }
+        &__money {
+            color: $green;
+            @include f700;
+        }
+        &__menu-list {
+            position: absolute;
+            top: 71px;
+            border: 0px solid rgb(204, 204, 204);
+            background-color: #fff;
+            width: 158px;
+            height: 0;
+            overflow: hidden;
+            transition: all 0.5s;
+            left: 20px;
+
+            & a {
+                color: #546e7a;
+                font-size: 12px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+.header__btn-off {
+    display: none;
+}
+
+.header__btn-logout {
+    display: none;
+    &.header__btn-on {
+        display: block;
+    }
+}
+
 // end header
 // start search
 .search {
@@ -527,10 +818,12 @@ iconsvg-1 {
         &-social {
             display: flex;
             justify-content: space-between;
+
             max-width: 170px;
             margin-bottom: 33px;
 
-            & li a {
+            & li + li {
+                margin-left: 5px;
             }
         }
     }
@@ -547,11 +840,11 @@ iconsvg-1 {
         & input {
             display: block;
             width: 100%;
-            padding:0 58px 0 15px ;
+            padding: 0 58px 0 15px;
             border: none;
             background-color: #2f3c43;
             color: #fff;
-            
+
             height: 40px;
             & ::placeholder {
                 font-size: 14px;
@@ -568,14 +861,12 @@ iconsvg-1 {
             height: 40px;
             width: 44px;
             border: none;
-            &::after{
-                content: '\f124';
+            &::after {
+                content: "\f124";
                 color: #fff;
                 font-size: 20px;
                 font-family: "icomoon";
-
             }
-            
         }
     }
 
