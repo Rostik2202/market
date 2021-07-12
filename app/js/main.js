@@ -18,3 +18,19 @@ $(function () {
 
 
 });
+
+
+$(function () {
+    const burger__menu = document.querySelector('.burger__menu');
+    burger__menu.addEventListener('click', () => {
+        burger__menu.classList.toggle('burger__menu-active');
+    })
+});
+
+$('.burger__menu').on('click', function () {
+    $('.menu__list').slideToggle();
+});
+
+$('.user__icon-box').on('click', function () {
+    $('.header__box').toggleClass('active');
+});

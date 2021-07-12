@@ -121,8 +121,8 @@
 }
 
 .notification__inner,
-.massage__inner{
-    .circle__link img{
+.massage__inner {
+    .circle__link img {
         width: 48px;
         height: 48px;
         border-radius: 50%;
@@ -130,18 +130,15 @@
     }
 }
 .notification__content,
-.massage__content{
+.massage__content {
     .circle__content-title,
     .circle__category,
-    .circle__date{
+    .circle__date {
         line-height: 18px;
-        
     }
-
-   
 }
 
-.massage__content .circle__category{
+.massage__content .circle__category {
     font-size: 11px;
 }
 
@@ -156,25 +153,23 @@
 }
 .basket__box,
 .massage__box,
-.notification__box{
+.notification__box {
     position: relative;
     height: 90px;
     margin: 56px 0px 0 15px;
     &:hover {
         .circle__inner {
             height: auto;
-            border-width: 1px;  
-            overflow: hidden; 
+            border-width: 1px;
+            overflow: hidden;
         }
-        .circle__item{
+        .circle__item {
             padding: 20px;
-            
         }
-        .header-circle::before{
+        .header-circle::before {
             color: $font;
         }
     }
-    
 }
 .circle__item {
     display: flex;
@@ -186,19 +181,19 @@
     z-index: 5;
     position: relative;
     background-color: #fff;
-    transition: all .5s;
-    &::before{
+    transition: all 0.5s;
+    &::before {
         position: absolute;
         right: 30px;
         top: 30px;
         font-size: 16px;
         color: #b0bec5;
         cursor: pointer;
-    }  
-}
-.icons__color::before{
-        color: $tomato;
     }
+}
+.icons__color::before {
+    color: $tomato;
+}
 
 .circle__link img {
     margin-right: 15px;
@@ -225,9 +220,13 @@
     @include f500;
 }
 
-.circle__date{
+.circle__date {
     font-size: 10px;
-    color:#90a4ae;
+    color: #90a4ae;
+}
+
+.basket__box{
+    margin-right: 20px;
 }
 
 .basker__sub {
@@ -286,7 +285,7 @@
             align-items: center;
             margin-right: 30px;
             padding-right: 22px;
-            margin-left: 20px;
+        
             position: relative;
             &::before {
                 content: "\f107";
@@ -346,6 +345,54 @@
     &.header__btn-on {
         display: block;
     }
+}
+
+.burger__menu {
+    width: 35px;
+    height: 25px;
+    cursor: pointer;
+    position: relative;
+    
+}
+
+.burger__line {
+    background-color: $green;
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    left: 0;
+    transition: all 0.5s linear;
+    &-first {
+        top: 0;
+    }
+    &-second, &-third {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &-fourht {
+        bottom: 0;
+    }
+}
+
+.burger__menu-active .burger__line-first, .burger__menu-active .burger__line-fourht {
+    opacity: 0;
+}
+
+.burger__menu-active .burger__line-second {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.burger__menu-active .burger__line-third {
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+.burger__menu{
+    display: none;
+}
+
+.user__icon-box{
+    display: none;
 }
 
 // end header
@@ -790,7 +837,7 @@ iconsvg-1 {
             padding-left: 30px;
             position: relative;
             &::before {
-                content: "\f095";
+                content: "\6d";
                 font-family: "icomoon";
                 position: absolute;
                 left: 0;
@@ -885,3 +932,9 @@ iconsvg-1 {
 }
 
 //end footer
+
+.section {
+    margin: 100px 0;
+}
+
+@import "media.scss";
