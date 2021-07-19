@@ -225,7 +225,7 @@
     color: #90a4ae;
 }
 
-.basket__box{
+.basket__box {
     margin-right: 20px;
 }
 
@@ -285,7 +285,7 @@
             align-items: center;
             margin-right: 30px;
             padding-right: 22px;
-        
+
             position: relative;
             &::before {
                 content: "\f107";
@@ -352,7 +352,6 @@
     height: 25px;
     cursor: pointer;
     position: relative;
-    
 }
 
 .burger__line {
@@ -365,7 +364,8 @@
     &-first {
         top: 0;
     }
-    &-second, &-third {
+    &-second,
+    &-third {
         top: 50%;
         transform: translateY(-50%);
     }
@@ -375,7 +375,8 @@
     }
 }
 
-.burger__menu-active .burger__line-first, .burger__menu-active .burger__line-fourht {
+.burger__menu-active .burger__line-first,
+.burger__menu-active .burger__line-fourht {
     opacity: 0;
 }
 
@@ -387,15 +388,124 @@
     transform: translateY(-50%) rotate(-45deg);
 }
 
-.burger__menu{
+.burger__menu {
     display: none;
 }
 
-.user__icon-box{
+.user__icon-box {
     display: none;
 }
-
 // end header
+
+//Login start
+
+#modal {
+    background-color: $green-light;
+    max-width: 730px;
+    width: 100%;
+    padding: 90px 160px 100px;
+}
+
+.modal__title {
+    color: #fff;
+    font-size: 48px;
+    @include f700;
+    margin-bottom: 40px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.modal__wrapper {
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    label {
+        position: relative;
+        display: block;
+        &::before {
+            position: absolute;
+            font-family: "icomoon";
+            font-size: 14px;
+            color: #fff;
+            left: 18px;
+            top: 9px;
+        }
+    }
+    .modal__label-login::before {
+        content: "\f007";
+    }
+    .modal__label-pass::before {
+        content: "\f023";
+    }
+
+    input {
+        height: 43px;
+        margin-bottom: 8px;
+        border: none;
+        background-color: $green;
+        color: #fff;
+        padding-left: 40px;
+        display: block;
+        width: 100%;
+        outline: none;
+        padding-right: 20px;
+        &::placeholder {
+            color: #fff;
+            font-size: 14px;
+        }
+    }
+}
+
+button {
+    margin: 19px 8px 0 0;
+    padding: 18px 0 16px;
+    width: 140px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    font-style: 14px;
+    @include f700;
+    text-transform: uppercase;
+    text-align: center;
+    box-shadow: 0px 2px 2px 0px rgba(118, 174, 54, 0.75);
+
+}
+
+.creat__link{
+   margin-top: 19px;
+    font-size: 18px;
+    color: #fff;
+    padding: 14px 0 16px;
+    width: 246px;
+    text-align: center;
+    background-color: $green;
+    position: relative;
+    &::before{
+        content: "\1f301";
+        font-family: icomoon;
+        position: absolute;
+        left: 30px;
+        font-size: 17px;
+    }
+    
+    
+}
+
+.fancybox-button svg path{
+    color: #fff;
+    
+}
+
+.lost__pass{
+    display: block;
+    color:#fff;
+    font-size: 18px;
+    margin-top: 25px;
+}
+
+
+//Login end
+
 // start search
 .search {
     background-repeat: no-repeat;

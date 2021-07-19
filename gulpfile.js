@@ -44,6 +44,7 @@ function scripts() {
         'node_modules/mixitup/dist/mixitup.js',
         'node_modules/rateyo/src/jquery.rateyo.js',
         'app/js/main.js',
+        'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
         
     ])
 
@@ -59,6 +60,7 @@ function style() {
         'node_modules/normalize.css/normalize.css',
         'node_modules/slick-carousel/slick/slick.css',
         'node_modules/rateyo/src/jquery.rateyo.css',
+        'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
     ])
 
         .pipe(concat('libs.min.css'))
