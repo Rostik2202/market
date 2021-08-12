@@ -1577,11 +1577,256 @@ iconsvg-1 {
         }
     }
 
-    .about__content-box+.about__content-box{
+    .about__content-box + .about__content-box {
         margin-top: 40px;
     }
 }
 
 //end about
+
+//start contact
+
+.contact {
+    background-color: #f4f6f5;
+    padding-bottom: 150px;
+    &__inner {
+        border: 1px solid #e7ecf2;
+    }
+
+    &__title {
+        padding: 23px 40px;
+        font-size: 24px;
+        color: $font;
+        @include f500;
+        background-color: #fff;
+        border-bottom: 1px solid #e7ecf2;
+    }
+
+    &__content {
+        background-color: #fff;
+        padding: 35px 40px 15px;
+    }
+
+    &__map {
+        margin-bottom: 50px;
+        iframe {
+            width: 100%;
+            height: 415px;
+        }
+    }
+
+    &__box {
+        display: flex;
+    }
+
+    &__info {
+        margin-left: 40px;
+        position: relative;
+        max-width: 250px;
+        margin-right: 70px;
+    }
+    &__address {
+        &::before {
+            content: "\f041";
+            font-family: "icomoon";
+            position: absolute;
+            color: #8bc34a;
+            font-size: 24px;
+            left: -37px;
+        }
+    }
+    &__phone {
+        &::before {
+            content: "\6d";
+            font-family: "icomoon";
+            position: absolute;
+            color: #8bc34a;
+            font-size: 24px;
+            left: -40px;
+        }
+    }
+    &__email {
+        &::before {
+            content: "\f003";
+            font-family: "icomoon";
+            position: absolute;
+            color: #8bc34a;
+            font-size: 24px;
+            left: -40px;
+        }
+    }
+
+    &-item__title {
+        color: $font;
+        font-size: 20px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        &::after {
+            width: 44px;
+        }
+    }
+
+    .contact__info-item + .contact__info-item {
+        margin-top: 32px;
+    }
+
+    &__form {
+        width: 100%;
+        &-title {
+            color: $font;
+            font-size: 24px;
+            margin-bottom: 28px;
+            @include f500;
+        }
+        &-row {
+            input {
+                width: 350px;
+                height: 42px;
+                border: none;
+                background-color: #f1f4f5;
+                margin-bottom: 30px;
+                padding: 0 17px;
+                &::placeholder {
+                }
+            }
+            input + input {
+                margin-left: 23px;
+            }
+        }
+
+        textarea {
+            width: 100%;
+            height: 193px;
+            border: none;
+            background-color: #f1f4f5;
+            padding: 15px 17px;
+            margin-bottom: 20px;
+            resize: none;
+        }
+
+        button {
+            border: none;
+            background-color: $green;
+            color: #fff;
+            font-size: 16px;
+            text-transform: uppercase;
+            @include f700;
+            max-width: 190px;
+            text-align: center;
+            width: 100%;
+            padding: 21px 0;
+        }
+    }
+}
+
+//end contact
+
+//start settings
+
+.settings {
+    background-color: #f4f6f5;
+    padding-bottom: 150px;
+}
+
+.product-one__tabs.settings__tabs {
+    display: flex;
+    .tabs {
+        max-width: 270px;
+        width: 100%;
+        height: 100%;
+        margin-right: 30px;
+        background-color: #fff;
+        border: 1px solid #dedede;
+        border-bottom: none;
+
+        .tab {
+            display: block;
+            border-bottom: 1px solid #dedede;
+            padding: 17px 17px 17px 50px;
+            cursor: pointer;
+            font-size: 14px;
+            @include f500;
+            &::before {
+                left: 23px;
+                color: #444444;
+            }
+            &.active {
+                border-bottom: 2px solid $green;
+                color: #37474f;
+                font-size: 14px;
+                &::before {
+                    color: $green;
+                }
+            }
+        }
+    }
+    .tab_content {
+        width: 100%;
+    }
+}
+
+.page__box {
+    border: 1px solid #dedede;
+    background-color: #fff;
+    &-title {
+        padding: 21px 30px 24px 30px;
+        font-size: 24px;
+        color: $font;
+        @include f500;
+        border-bottom: 1px solid #dedede;
+    }
+    &-content {
+        padding: 35px 30px 80px 35px;
+    }
+
+    .settings__line {
+        margin-bottom: 21px;
+        display: flex;
+        align-items: center;
+
+        label {
+            color: #444;
+            width: 260px;
+        }
+        input {
+            max-width: 540px;
+            width: 100%;
+            background-color: #f9f9f9;
+            border: 1px solid #dedede;
+            height: 40px;
+            color: #000;
+            padding: 0 15px;
+        }
+        select {
+            max-width: 540px;
+            width: 100%;
+            background-color: #f9f9f9;
+            border: 1px solid #dedede;
+            height: 40px;
+            color: #000;
+            padding: 0 15px;
+            color: #707070;
+        }
+    }
+    form {
+        
+        button {
+            border: none;
+            width: 500px;
+            background-color: $green;
+            color: #fff;
+            width: 108px;
+            padding: 16px 0;
+            margin-top: 3px;
+            @include f500;
+            text-align: center;
+            margin-left: 260px;
+            cursor: pointer;
+            
+        }
+    }
+}
+
+//end settings
 
 @import "media.scss";
