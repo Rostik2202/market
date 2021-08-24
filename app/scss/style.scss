@@ -19,7 +19,7 @@
 }
 
 .header__btn {
-    width: 72px;
+    width: 68px;
     border-radius: 4px;
     color: #fff;
     padding: 4px;
@@ -1315,7 +1315,63 @@ iconsvg-1 {
         color: $red;
         @include f500;
     }
+
+    .jq-selectbox {
+        vertical-align: middle;
+        cursor: pointer;
+    }
+    .jq-selectbox__select {
+        height: 25px;
+        padding: 0px 26px 0px 10px;
+        border: 1px solid #dcdcdc;
+        border-radius: 0px;
+        background: transparent;
+        box-shadow: none;
+        font-family: "Roboto-Regular", sans-serif;
+        font-size: 13px;
+        line-height: 24px;
+        color: #707070;
+        text-shadow: none;
+    }
+
+    .jq-selectbox__trigger {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 34px;
+        height: 100%;
+        border-left: none;
+       
+    }
+
+    .jq-selectbox__trigger-arrow {
+        position: absolute;
+        top: 1px;
+        right: 20px;
+        width: 0;
+        height: 0;
+        border-top: none;
+        border-right: none;
+        border-left:none;
+         &::before{
+            content: "\f107";
+            font-family: 'icomoon';
+            color: $green;
+            font-size: 13px;
+
+        }
+    }
+
+    .jq-selectbox__dropdown{
+        top: 25px;
+    }
+
+    
 }
+
+
+    
+
 
 .prise__button {
     margin-bottom: 7px;
@@ -1476,6 +1532,7 @@ iconsvg-1 {
         font-weight: 400;
     }
 }
+
 //end product-one-asite
 
 //start 404
@@ -1807,6 +1864,45 @@ iconsvg-1 {
             padding: 0 15px;
             color: #707070;
         }
+
+        .jq-selectbox{
+            width: 540px;
+        }
+        .jq-selectbox__select {
+            height: 40px;
+            padding: 0 18px;
+            border: 1px solid #dfdfdf;
+            border-bottom-color: #dfdfdf;
+            border-radius: 0px;
+            background: #f9f9f9;
+            box-shadow: none;
+            font-family: "Roboto-Regular", sans-serif;
+            color: #707070;
+            text-shadow: none;
+            line-height: 40px;
+        }
+
+        .jq-selectbox__trigger {
+            border-left: none;
+        }
+
+        .jq-selectbox__trigger-arrow {
+            border: none;
+            top: 0;
+            right: 30px;
+            &::before {
+                content: "\f107";
+                font-family: "icomoon";
+                color: #444444;
+                font-size: 15px;
+            }
+        }
+
+        .jq-selectbox__dropdown{
+            top: 40px;
+        }
+        
+        
     }
     form {
         button {
@@ -2014,5 +2110,145 @@ iconsvg-1 {
 }
 
 //end frofile
+
+//start upload
+
+.upload {
+    background-color: #f4f6f5;
+    padding-bottom: 110px;
+    &__inner {
+        border: 1px solid #dfdfdf;
+        background-color: #fff;
+        &-title {
+            font-size: 24px;
+            @include f500;
+            color: $font;
+            border-bottom: 1px solid #dfdfdf;
+            padding: 15px 30px;
+            margin-bottom: 40px;
+        }
+        &-content {
+            margin-bottom: 40px;
+            padding-left: 45px;
+            padding-right: 50px;
+        }
+        &-line {
+            display: flex;
+            padding-top: 5px;
+            margin-bottom: 35px;
+            label {
+                min-width: 170px;
+                padding-right: 15px;
+                color: #444;
+                span {
+                    color: $green;
+                    font-size: 24px;
+                    margin-left: 5px;
+                }
+                &::placeholder {
+                    color: #707070;
+                }
+            }
+            input,
+            textarea,
+            select {
+                width: 100%;
+                display: block;
+                background-color: #f9f9f9;
+                border: 1px solid #dfdfdf;
+                height: 40px;
+                padding: 0 18px;
+            }
+            textarea {
+                height: 150px;
+                padding: 8px 18px;
+                resize: none;
+            }
+
+            .jq-selectbox {
+                width: 100%;
+            }
+            .jq-selectbox__select {
+                height: 40px;
+                padding: 0 18px;
+                border: 1px solid #dfdfdf;
+                border-bottom-color: #dfdfdf;
+                border-radius: 0px;
+                background: #f9f9f9;
+                box-shadow: none;
+                font-family: "Roboto-Regular", sans-serif;
+                color: #707070;
+                text-shadow: none;
+                line-height: 40px;
+            }
+
+            .jq-selectbox__trigger {
+                border-left: none;
+            }
+
+            .jq-selectbox__trigger-arrow {
+                border: none;
+                top: 0;
+                right: 30px;
+                &::before {
+                    content: "\f107";
+                    font-family: "icomoon";
+                    color: #444444;
+                    font-size: 15px;
+                }
+            }
+
+            .jq-file {
+                width: 100%;
+                border-radius: 0px;
+                box-shadow: none;
+                background-color: #f9f9f9;
+                border: 1px solid #dfdfdf;
+                height: 40px;
+            }
+            .jq-file__name {
+                height: 40px;
+                margin-left: 95px;
+                padding: 0 18px;
+                border: none;
+                border-bottom-color: transparent;
+                border-radius: 0px;
+                background: transparent;
+                box-shadow: none;
+                font-family: "Roboto-Regular", sans-serif;
+                color: #707070;
+                font-size: 12px;
+                line-height: 39px;
+            }
+
+            .jq-file__browse {
+                position: absolute;
+                top: 6px;
+                right: auto;
+                left: 9px;
+                padding: 0 12px;
+                border: 1px solid #dfdfdf;
+                border-radius: 0;
+                background: #fff;
+                box-shadow: none;
+                font: 14px/32px Arial, sans-serif;
+                color: #444444;
+                text-shadow: 1px 1px #fff;
+                font-size: 12px;
+                line-height: 24px;
+            }
+        }
+        button {
+            border: none;
+            background-color: $green;
+            color: #fff;
+            @include f500;
+            padding: 15px 35px;
+            margin-left: 170px;
+            cursor: pointer;
+        }
+    }
+}
+//end uploud
 
 @import "media.scss";

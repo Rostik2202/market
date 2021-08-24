@@ -43,3 +43,10 @@ $('.product-one__tabs .tab, .settings__tabs .tabs').on('click', function (event)
     $('#' + id).addClass('active-tab').fadeIn();
     return false;
 });
+
+$(function() {
+
+	$('input[type="file"], select').styler();
+
+});
+
