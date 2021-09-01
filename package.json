@@ -21,6 +21,7 @@
     "mixitup": "^3.3.1",
     "normalize.css": "^8.0.1",
     "rateyo": "^2.3.5",
+    "sass": "^1.38.2",
     "slick-carousel": "^1.8.1"
   },
   "scripts": {
