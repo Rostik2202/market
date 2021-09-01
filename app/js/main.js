@@ -12,6 +12,36 @@ $(function () {
         slidesToScroll: 4,
         dots: true,
         arrows: false,
+        responsive: [
+            {
+                breakpoint: 1900,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 1450,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 700,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+
+        ]
     });
 
     var mixer = mixitup('.products__inner-box');
@@ -44,9 +74,9 @@ $('.product-one__tabs .tab, .settings__tabs .tabs').on('click', function (event)
     return false;
 });
 
-$(function() {
+$(function () {
 
-	$('input[type="file"], select').styler();
+    $('input[type="file"], select').styler();
 
 });
 
