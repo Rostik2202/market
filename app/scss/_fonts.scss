@@ -1,0 +1,230 @@
+@font-face {
+    font-family: "Roboto-Regular", sans-serif;
+    src: url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff");
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?m4xker');
+    src:  url('../fonts/icomoon.eot?m4xker#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?m4xker') format('truetype'),
+      url('../fonts/icomoon.woff?m4xker') format('woff'),
+      url('../fonts/icomoon.svg?m4xker#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-asterisk:before {
+    content: "\f069";
+  }
+  .icon-search:before {
+    content: "\f002";
+  }
+  .icon-envelope-o:before {
+    content: "\f003";
+  }
+  .icon-heart:before {
+    content: "\f004";
+  }
+  .icon-star:before {
+    content: "\f005";
+  }
+  .icon-star-o:before {
+    content: "\f006";
+  }
+  .icon-user:before {
+    content: "\f007";
+  }
+  .icon-th-large:before {
+    content: "\f009";
+  }
+  .icon-th:before {
+    content: "\f00a";
+  }
+  .icon-th-list:before {
+    content: "\f00b";
+  }
+  .icon-check:before {
+    content: "\f00c";
+  }
+  .icon-lock:before {
+    content: "\f023";
+  }
+  .icon-list:before {
+    content: "\f03a";
+  }
+  .icon-map-marker:before {
+    content: "\f041";
+  }
+  .icon-chevron-right:before {
+    content: "\1f301";
+  }
+  .icon-mail-forward:before {
+    content: "\f064";
+  }
+  .icon-share:before {
+    content: "\f064";
+  }
+  .icon-comment:before {
+    content: "\f075";
+  }
+  .icon-shopping-cart:before {
+    content: "\f07a";
+  }
+  .icon-folder:before {
+    content: "\f07b";
+  }
+  .icon-twitter-square:before {
+    content: "\f081";
+  }
+  .icon-facebook-square:before {
+    content: "\f082";
+  }
+  .icon-heart-o:before {
+    content: "\f08a";
+  }
+  .icon-linkedin-square:before {
+    content: "\f08c";
+  }
+  .icon-phone:before {
+    content: "\6d";
+  }
+  .icon-bell-o:before {
+    content: "\f0a2";
+  }
+  .icon-arrow-circle-up:before {
+    content: "\f0aa";
+  }
+  .icon-arrow-circle-down:before {
+    content: "\f0ab";
+  }
+  .icon-list-ul:before {
+    content: "\f0ca";
+  }
+  .icon-sort:before {
+    content: "\f0dc";
+  }
+  .icon-unsorted:before {
+    content: "\f0dc";
+  }
+  .icon-linkedin:before {
+    content: "\f0e1";
+  }
+  .icon-comment-o:before {
+    content: "\f0e5";
+  }
+  .icon-bolt:before {
+    content: "\f0e7";
+  }
+  .icon-flash:before {
+    content: "\f0e7";
+  }
+  .icon-angle-left:before {
+    content: "\f104";
+  }
+  .icon--angle-right:before {
+    content: "\f105";
+  }
+  .icon-angle-up:before {
+    content: "\f106";
+  }
+  .icon-angle-down:before {
+    content: "\f107";
+  }
+  .icon-smile-o:before {
+    content: "\f118";
+  }
+  .icon-location-arrow:before {
+    content: "\f124";
+  }
+  .icon-rss-square:before {
+    content: "\f143";
+  }
+  .icon-youtube-play:before {
+    content: "\f16a";
+  }
+  .icon-dropbox:before {
+    content: "\f16b";
+  }
+  .icon-stack-overflow:before {
+    content: "\f16c";
+  }
+  .icon-instagram:before {
+    content: "\f16d";
+  }
+  .icon-windows:before {
+    content: "\f17a";
+  }
+  .icon-vk:before {
+    content: "\f189";
+  }
+  .icon-pagelines:before {
+    content: "\f18c";
+  }
+  .icon-wordpress:before {
+    content: "\f19a";
+  }
+  .icon-yahoo:before {
+    content: "\f19e";
+  }
+  .icon-reddit:before {
+    content: "\f1a1";
+  }
+  .icon-git-square:before {
+    content: "\f1d2";
+  }
+  .icon-paper-plane:before {
+    content: "\f1d8";
+  }
+  .icon-send:before {
+    content: "\f1d8";
+  }
+  .icon-paper-plane-o:before {
+    content: "\f1d9";
+  }
+  .icon-send-o:before {
+    content: "\f1d9";
+  }
+  .icon-bell-slash:before {
+    content: "\f1f6";
+  }
+  .icon-bell-slash-o:before {
+    content: "\f1f7";
+  }
+  .icon-cart-plus:before {
+    content: "\f217";
+  }
+  .icon-cart-arrow-down:before {
+    content: "\f218";
+  }
+  .icon-commenting:before {
+    content: "\f27a";
+  }
+  .icon-commenting-o:before {
+    content: "\f27b";
+  }
+  .icon-envelope-open:before {
+    content: "\f2b6";
+  }
+  .icon-envelope-open-o:before {
+    content: "\f2b7";
+  }
+  

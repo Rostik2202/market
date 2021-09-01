@@ -40,7 +40,15 @@ function images() {
 function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.js',
+        'node_modules/slick-carousel/slick/slick.js',
+        'node_modules/mixitup/dist/mixitup.js',
+        'node_modules/rateyo/src/jquery.rateyo.js',
         'app/js/main.js',
+        'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
+        'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
+        
+
+        
     ])
 
         .pipe(concat('main.min.js'))
@@ -50,8 +58,24 @@ function scripts() {
 
 }
 
+function style() {
+    return src([
+        'node_modules/normalize.css/normalize.css',
+        'node_modules/slick-carousel/slick/slick.css',
+        'node_modules/rateyo/src/jquery.rateyo.css',
+        'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
+        'node_modules/jquery-form-styler/dist/jquery.formstyler.css',
+        'node_modules/jquery-form-styler/dist/jquery.formstyler.theme.css',
+    ])
+
+        .pipe(concat('libs.min.css'))
+        .pipe(dest('app/css'))
+        .pipe(browserSync.stream())
+
+}
+
 function styles() {
-    return src('app/scss/style.scss')
+    return src('app/scss/**/*.scss')
         .pipe(scss({ outputStyle: 'compressed' }))
         .pipe(concat('style.min.css'))
         .pipe(autoprefixer({
@@ -71,7 +95,7 @@ function watching() {
 
 function build() {
     return src([
-        'app/css/style.min.css',
+        'app/scss/**/*.scss',
         'app/js/main.min.js',
         'app/fonts/**/*',
         'app/*.html'
@@ -89,4 +113,4 @@ exports.cleanDist = cleanDist;
 
 
 exports.build = series(cleanDist, images, build);
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.default = parallel(style, styles, scripts, browsersync, watching);
